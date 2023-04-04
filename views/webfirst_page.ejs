@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- <link href="./css/styles.css" rel="stylesheet" /> -->
+    <title>Sports Scheduler</title>
+    <!-- <link href="./css/styles.css" rel="stylesheet" /> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        background: linear-gradient(90deg, whitesmoke, gray);
+      }
+      section {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #admin {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)),
+          url("./bg1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      #players {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)),
+          url("./bg2.webp");
+        background-size: cover;
+        background-position: center;
+      }
+
+      #adminBtn {
+        width: 15%;
+        height: 10%;
+        font-size: 23px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(10, 155, 10);
+        color: white;
+        font-weight: bold;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        box-shadow: 1px 1px 10px 0px rgb(191, 185, 185);
+      }
+
+      #adminBtn:hover {
+        background-color: gray !important;
+        transition: 0.5s;
+      }
+
+      #userBtn {
+        width: 15%;
+        height: 10%;
+        font-size: 23px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(0, 132, 255);
+        color: white;
+        font-weight: bold;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        box-shadow: 1px 1px 10px 0px rgb(191, 185, 185);
+      }
+
+      #userBtn:hover {
+        background-color: gray !important;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">Sports Scheduler</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#players">Join Sports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" aria-current="page" href="#admin"
+                >Create Sports</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="players">
+      <p class="h2 text-white fw-bold">As a Player,</p>
+      <br />
+      <p
+        class="h4 w-75 fw-bolds"
+        style="
+          text-align: justify;
+          color: rgb(200, 200, 200);
+          word-spacing: 2px;
+        "
+      >
+        You can join a session that has been created by other players or the
+        administrator. You can also create a new session and invite other
+        players to join it. However, you are only allowed to modify or delete
+        the sessions that you have created. Once a session has ended, you will
+        not be able to join it
+      </p>
+      <br /><button
+        id="userBtn"
+        class="btn btn-primary"
+        onclick="window.location.href='/login'"
+      >
+        Join Sports
+      </button>
+    </section>
+    <section id="admin">
+      <p class="h2 text-white fw-bold">As a Administrator,</p>
+      <br />
+      <p
+        class="h4 w-75 fw-bolds"
+        style="
+          text-align: justify;
+          color: rgb(200, 200, 200);
+          word-spacing: 2px;
+        "
+      >
+        You are able to create sports and sessions. Additionally, you have the
+        ability to update and delete both sports and sessions. You also have the
+        authority to delete sessions of other players and add players to any
+        session. However, you cannot add players to finished sessions.
+        Furthermore, you have the capability to view reports for each session.
+      </p>
+      <br /><button id="adminBtn" onclick="window.location.href='/admin_login'">
+        Create Sports
+      </button>
+    </section>
+  </body>
+</html>
