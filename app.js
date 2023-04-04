@@ -1,6 +1,6 @@
-const { LocalStorage } = require("node-localstorage");
-//const  localStorage=require("node-sessionstorage")
-var localStorage = new LocalStorage("./scratch");
+//const { LocalStorage } = require("node-localstorage");
+const  localStorage=require("node-sessionstorage")
+//var localStorage = new LocalStorage("./scratch");
 const express = require("express"); //importing express
 var csrf = require("tiny-csrf");
 const app = express(); // creating new application
